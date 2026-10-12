@@ -1,0 +1,188 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  cursor: url(images/cursor.png), default;
+}
+
+/* .rabbit-group:hover {
+    cursor: url('images/cursor2.png'), auto;
+} */
+
+body {
+    background-image: url(images/grassfield.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.moving-container {
+    position: fixed;
+    top: 19rem;
+    left: 0;
+    width: 70px;
+    cursor: url('images/cursor2.png'), auto;
+    animation: moveAcross 2s linear infinite;
+}
+.moving-container:hover {
+    animation-play-state: paused;
+}
+.sitting {
+    display: none;
+}
+.moving-container:hover .running {
+    display: none;
+}
+.moving-container:hover .sitting {
+    display: block;
+}
+.moving-container img {
+    width: 200%;
+    height: auto;
+}
+@keyframes moveAcross {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+
+
+
+.moving-container2 {
+    position: fixed;
+    top: 30rem;
+    left: 40rem;
+    width: 90px; 
+    cursor: url('images/cursor2.png'), auto;
+}
+
+.moving-container2:hover .rabbit4 {
+    display: none;
+}
+
+.moving-container2:hover .rabbit3 {
+    display: block;
+}
+
+.moving-container2 img {
+    width: 100%;
+    height: auto;
+}
+.rabbit3 {
+    display: none;
+}
+.moving-container2:hover .rabbit4 {
+    display: none;
+}
+.moving-container2:hover .rabbit3 {
+    display: block;
+}
+
+
+
+
+.rabbit5 {
+    position: fixed;
+    width: 350px;
+    z-index: 9999;
+}
+.rabbit5:hover {
+    cursor: url('images/cursor2.png'), auto;
+    transition: opacity 2s ease;
+    transition: opacity 2s ease-out;
+    opacity: 0;
+}
+
+
+
+.rabbit6 {
+    position: fixed;
+    top:450px;
+    left: 70rem;
+    width: 250px;
+    height: auto;
+}
+.rabbit6:hover {
+    transition: 2s ease;
+    transform: rotateY(360deg);
+}
+
+
+
+
+.rabbit7 {
+    position: fixed;
+    top: 30rem;
+    left: 10rem;
+    width: 400px;
+    height: auto;
+    cursor: url('images/cursor2.png'), auto;
+
+}
+.rabbit7.fly-away {
+    animation: flySpinFade 8s ease-in-out forwards;
+}
+
+@keyframes flySpinFade {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    
+    25% {
+        transform: translate(120vw, -84vw) scale(0) rotate(1080deg);
+        opacity: 0;
+    }
+
+    25.1% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 0;
+    }
+
+    87.5% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+.rabbit8 {
+    position: fixed;
+    top:27rem;
+    left: 58rem;
+    width: 180px;
+    height: auto;
+    cursor: url('images/cursor2.png'), auto;
+
+}
+.rabbit8.tilt {
+    animation: rotateAndHold 3s ease-in-out;
+}
+
+@keyframes rotateAndHold {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    13% {
+        transform: rotate(30deg);
+    }
+    
+    80% {
+        transform: rotate(30deg);
+    }
+    
+    100% {
+        transform: rotate(0deg);
+    }
+}
