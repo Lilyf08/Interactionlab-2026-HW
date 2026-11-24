@@ -1,0 +1,135 @@
+.libre-caslon-text-regular {
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-caslon-text-bold {
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-caslon-text-regular-italic {
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+.gallery {
+  padding: 380px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-areas: "col1 col2 col3";
+  gap: 100px;
+  align-items: start;
+  z-index: 1;
+}
+
+.col1 {
+  grid-area: col1;
+  text-align: right;
+}
+
+.col2 {
+  grid-area: col2;
+  display: grid;
+  justify-items: center;
+  gap: 250px;
+}
+
+.col2 img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 50px 0;
+  display: block;
+}
+
+.col3 {
+  grid-area: col3;
+  text-align: left;
+}
+
+.goldenframe {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(calc(1 / 55));
+  z-index: 3;
+  pointer-events: none;
+}
+
+.goldenframe img {
+  display: block;
+}
+
+
+/* h1 and h2 ------------------------------------------ */
+
+.row-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "h1"
+    "img"
+    "h2";
+  gap: 250px;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header h1 {
+  grid-area: h1;
+  margin: 0;
+  font-size: 100px;
+}
+
+.header img {
+  grid-area: img;
+  width: 140px;
+  height: auto;
+  display: block;
+}
+
+.header .collectors {
+  grid-area: h2;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+.header h2 {
+  margin: 0;
+  color: black;
+  font-size: 10px;
+  font-weight: lighter;
+}
+
+
+.ombre {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.ombre img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
